@@ -6,6 +6,7 @@ import Home from "./pages/Home";
 import History from "./pages/History";
 import Launches from "./pages/Launches";
 import Rockets from "./pages/Rockets";
+import RocketDetail from "./components/RocketDetail";
 import Layout from "./components/Layout";
 
 const App = () => {
@@ -22,6 +23,7 @@ const App = () => {
         { path: "/history", element: <History /> },
         { path: "/launches", element: <Launches /> },
         { path: "/rockets", element: <Rockets /> },
+        { path: "/rockets/:rocketId", element: <RocketDetail /> },
       ],
     },
   ]);
