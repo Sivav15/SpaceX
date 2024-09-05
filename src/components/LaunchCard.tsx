@@ -1,16 +1,8 @@
 import React from "react";
+import { Launch } from "../types/interface";
 
 interface LaunchCardProps {
-  launch: {
-    id: string;
-    name: string;
-    details: string;
-    date_utc: string;
-    links: {
-      article?: string;
-      webcast?: string;
-    };
-  };
+  launch: Launch;
 }
 
 const LaunchCard: React.FC<LaunchCardProps> = ({ launch }) => {

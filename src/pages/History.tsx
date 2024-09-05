@@ -1,17 +1,9 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
 import HistoryCard from "../components/HistoryCard";
+import { history } from "../types/interface";
 
 // Define types for the history data
-interface history {
-  title: string;
-  event_date_utc: string;
-  event_date_unix: number;
-  details: string;
-  links?: {
-    article?: string;
-  };
-}
 
 const History: React.FC = () => {
   const [historyData, setHistoryData] = useState<history[]>([]);

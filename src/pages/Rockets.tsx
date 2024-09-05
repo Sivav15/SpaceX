@@ -4,15 +4,9 @@ import RocketCard from "../components/RocketCard";
 import { useDispatch, useSelector } from "react-redux";
 import { addRockets } from "../features/rocketsSlice";
 import { RootState } from "../app/store";
+import { Rocket } from "../types/interface";
 
 // Define the types for the rocket data from the SpaceX API
-interface Rocket {
-  id: string;
-  name: string;
-  description: string;
-  flickr_images: string[];
-  wikipedia: string;
-}
 
 const Rockets: React.FC = () => {
   const { rockets } = useSelector((state: RootState) => state.rocketsSlice);
@@ -23,6 +17,7 @@ const Rockets: React.FC = () => {
         const response = await axios.get<Rocket[]>(
           "https://api.spacexdata.com/v4/rockets"
         );
+
         dispatch(addRockets(response.data));
       } catch (error) {
         console.error("Error fetching rocket data:", error);

@@ -1,13 +1,8 @@
 import { createSlice } from '@reduxjs/toolkit'
 import type { PayloadAction } from '@reduxjs/toolkit'
+import { Rocket } from '../types/interface';
 
-interface Rocket {
-    id: string;
-    name: string;
-    description: string;
-    flickr_images: string[];
-    wikipedia: string;
-  }
+
 
 export interface RocketState {
   rockets: Rocket[]; 

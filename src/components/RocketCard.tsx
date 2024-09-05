@@ -1,14 +1,9 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import { Rocket } from "../types/interface";
 
 interface RocketCardProps {
-  rocket: {
-    id: string;
-    name: string;
-    description: string;
-    flickr_images: string[];
-    wikipedia: string;
-  };
+  rocket: Rocket;
 }
 
 const RocketCard: React.FC<RocketCardProps> = ({ rocket }) => {

@@ -1,15 +1,8 @@
 import React from "react";
+import { history } from "../types/interface";
 
-// Define the structure inside the history object
 interface historyCardProps {
-  history: {
-    title: string;
-    details: string;
-    event_date_utc: string;
-    links?: {
-      article?: string;
-    };
-  };
+  history: history;
 }
 
 const HistoryCard: React.FC<historyCardProps> = ({ history }) => {
