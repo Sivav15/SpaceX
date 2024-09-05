@@ -2,7 +2,7 @@ import React from "react";
 
 const Home = () => {
   return (
-    <div className="flex flex-col items-center justify-center w-full h-full from-gray-900 to-black text-white">
+    <div className="flex flex-col items-center justify-center w-full h-[90vh] from-gray-900 to-black text-white">
       <div className="text-center max-w-md mx-auto">
         <h2 className="text-4xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-blue-500 to-purple-600">
           Welcome to SpaceX Info

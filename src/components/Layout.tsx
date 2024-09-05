@@ -11,7 +11,7 @@ const Layout = () => {
       </div>
 
       {/* Content Section */}
-      <div className="w-full h-[90vh] bg-[#F3F4F6]">
+      <div className="w-full min-h-full  bg-[#F3F4F6]">
         <Outlet />
       </div>
     </div>

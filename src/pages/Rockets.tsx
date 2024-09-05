@@ -1,7 +1,5 @@
-import React, { useEffect, useState } from "react";
-
+import React, { useEffect } from "react";
 import axios from "axios";
-import RocketDetail from "../components/RocketDetail";
 import RocketCard from "../components/RocketCard";
 import { useDispatch, useSelector } from "react-redux";
 import { addRockets } from "../features/rocketsSlice";
@@ -35,7 +33,7 @@ const Rockets: React.FC = () => {
   }, []);
 
   return (
-    <div className="">
+    <div className="w-full h-full p-4">
       <h2 className="text-3xl pt-2 font-bold text-center">SpaceX Rockets</h2>
 
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 mt-8 px-4">

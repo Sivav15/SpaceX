@@ -1,35 +1,53 @@
-import { Link } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 
 const Navbar = () => {
   return (
     <nav className="bg-gray-900 p-4 shadow-lg">
       <div className="container mx-auto flex flex-row items-center justify-between">
-        <h1 className="text-white text-3xl font-bold">SpaceX Info</h1>
-        <div className="flex space-x-6">
-          <Link
+        <h1 className="text-white md:text-2xl text-lg  font-bold">
+          SpaceX Info
+        </h1>
+        <div className="flex md:space-x-6 space-x-3">
+          <NavLink
             to="/"
-            className="text-white text-lg hover:text-gray-300 transition duration-300"
+            className={({ isActive }) =>
+              isActive
+                ? "text-gray-300 md:text-lg text-md border-b-2 border-blue-500"
+                : "text-white md:text-lg  text-md hover:text-gray-300 transition duration-300"
+            }
           >
             Home
-          </Link>
-          <Link
+          </NavLink>
+          <NavLink
             to="/history"
-            className="text-white text-lg hover:text-gray-300 transition duration-300"
+            className={({ isActive }) =>
+              isActive
+                ? "text-gray-300 md:text-lg text-md border-b-2 border-blue-500"
+                : "text-white md:text-lg text-md hover:text-gray-300 transition duration-300"
+            }
           >
             History
-          </Link>
-          <Link
+          </NavLink>
+          <NavLink
             to="/launches"
-            className="text-white text-lg hover:text-gray-300 transition duration-300"
+            className={({ isActive }) =>
+              isActive
+                ? "text-gray-300  md:text-lg text-md border-b-2 border-blue-500"
+                : "text-white md:text-lg text-md hover:text-gray-300 transition duration-300"
+            }
           >
             Launches
-          </Link>
-          <Link
+          </NavLink>
+          <NavLink
             to="/rockets"
-            className="text-white text-lg hover:text-gray-300 transition duration-300"
+            className={({ isActive }) =>
+              isActive
+                ? "text-gray-300 md:text-lg text-md border-b-2 border-blue-500"
+                : "text-white md:text-lg text-md  hover:text-gray-300 transition duration-300"
+            }
           >
             Rockets
-          </Link>
+          </NavLink>
         </div>
       </div>
     </nav>
