@@ -1,6 +1,6 @@
 import React from "react";
 
-const Home = () => {
+const Home: React.FC = () => {
   return (
     <div className="flex flex-col items-center justify-center w-full h-[90vh] from-gray-900 to-black text-white">
       <div className="text-center max-w-md mx-auto">

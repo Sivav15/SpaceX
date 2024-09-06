@@ -9,7 +9,7 @@ import Rockets from "./pages/Rockets";
 import RocketDetail from "./components/RocketDetail";
 import Layout from "./components/Layout";
 
-const App = () => {
+const App: React.FC = () => {
   const router = createBrowserRouter([
     {
       path: "*",
