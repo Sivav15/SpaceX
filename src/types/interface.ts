@@ -23,7 +23,7 @@ export interface Rocket {
     success: boolean;
     details: string;
     links: {
-      article: string;
+     article: string;
       wikipedia?: string;
       webcast?: string;
     };

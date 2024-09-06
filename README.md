@@ -1,50 +1,53 @@
-# React + TypeScript + Vite
+# SpaceX
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+SpaceX is a web app that provides information about rockets and space exploration. Built using **React**, **TypeScript**, and **Tailwind CSS**, it’s fast, responsive, and easy to maintain.
 
-Currently, two official plugins are available:
+## Getting Started
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+### Clone the Repository
 
-## Expanding the ESLint configuration
-
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
-
-- Configure the top-level `parserOptions` property like this:
-
-```js
-export default tseslint.config({
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
+```bash
+git clone https://github.com/Sivav15/SpaceX
+cd SpaceX
 ```
 
-- Replace `tseslint.configs.recommended` to `tseslint.configs.recommendedTypeChecked` or `tseslint.configs.strictTypeChecked`
-- Optionally add `...tseslint.configs.stylisticTypeChecked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and update the config:
+### Install Dependencies
 
-```js
-// eslint.config.js
-import react from 'eslint-plugin-react'
-
-export default tseslint.config({
-  // Set the react version
-  settings: { react: { version: '18.3' } },
-  plugins: {
-    // Add the react plugin
-    react,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended rules
-    ...react.configs.recommended.rules,
-    ...react.configs['jsx-runtime'].rules,
-  },
-})
+```bash
+npm install
 ```
+
+### Start the Development Server
+
+```bash
+npm run dev
+```
+
+### Project Structure
+
+1. src/app: App-wide configurations.
+2. src/assets: Static assets like images.
+3. src/components: Reusable UI components.
+4. src/features: Specific features of the app.
+5. src/pages: Page-level components.
+6. src/types: TypeScript types and interfaces.
+
+### Technology Choices
+
+1. React: For building UI components.
+2. TypeScript: For strict typing and fewer bugs.
+3. Tailwind CSS: For fast, responsive styling.
+4. Vite: For fast development and build times.
+5. Redux Toolkit: For managing global state.
+
+### UI Design
+
+1. Responsive: Works on all screen sizes.
+2. Tailwind CSS: Used for simple, fast styling.
+
+### Improvements
+
+1. Add unit tests for better reliability.
+2. Improve performance with lazy loading.
+3. Add error handling for better user experience.
+4. Focus more on accessibility.
